@@ -14,9 +14,6 @@ eani<-as.numeric(unlist(str_split(ean13,"")))
 #Cálculo de código de control 
 for(i in 1:12)
 {
-  if(i%%2)
-    {sumai<-sumai+eani[i]}
-  if((i%%2)==0)
-    {sumap<-sumap+eani[i]} 
+  ifelse (i%%2, sumai<-sumai+eani[i],sumap<-sumap+eani[i])
 }
 print(10-(sumai*1+sumap*3)%%10)

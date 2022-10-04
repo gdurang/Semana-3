@@ -8,12 +8,12 @@ View(patentes)
 placas<-character(368)
 placa<-character(7)
 
-#caga de arreglo
+#carga de arreglo
 placas<-patentes$Placa
 
 #toma la patente número 100 de 368 
-placa<-placas[100]
-placa<-"CTPB-60"
+placa<-placas[300]
+#placa<-"CTPB-60"
 
 #convierte la pantente en arreglo de caracteres
 placac<-as.character(unlist(str_split(placa, "")))
@@ -40,3 +40,5 @@ for( j in 6:1)
   }
 residuo<-11-suma%%11
 if(residuo==0) dv<-"0" else if (residuo==10) dv<-"K" else dv<-residuo
+dv
+placa
