@@ -1,0 +1,194 @@
+---
+title: "Bifurcación y Bucle"
+author: "Guillermo Durán González"
+date: "2022-10-04"
+output: beamer_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Bifurcación If 
+
+Siempre que la condición sea TRUE (!=0 )
+
+
+```{r remedy001, echo=TRUE}
+
+if(3 > 2) print(' :D ') 
+if(3 < 2) print(' :( ') 
+if(5) print(' :D ')
+
+```
+
+
+## Se pueden usar las { } para insertar varios comandos juntos:
+
+
+```{r remedy002, echo=TRUE}
+
+if(3 > 2) 
+  { 
+  print('Es verdadero!') 
+  print(' :D ') 
+  }
+
+```
+
+## Se ejecuta cuando la sentencia es TRUE o FALSE 
+
+```{r remedy003, echo=TRUE}
+
+x <- 1:10 
+clasif <- ifelse(x > 5, 'grande', 'chico') 
+clasif <- paste(x, clasif) 
+clasif
+
+```
+
+## Manera alternativa
+
+```{r remedy004, echo=TRUE}
+
+x=1
+z=5
+if(x>3) { y <- 10} else {y<-0}
+
+```
+
+## Bucle For
+
+```{r remedy005, echo=TRUE}
+
+for(i in 1:10) 
+  { 
+  print(i) #Imprime consecutivamente del 1 al 10 
+  }
+
+```
+
+## Con arreglo
+
+```{r remedy006, echo=TRUE}
+
+x<-c("a","b","c","d")
+for(i in 1:6) 
+  { 
+  print(x[i]) # Imprime cada uno de los elementos de x.
+  } 
+  # Los dos últimos, al no existir en x aparecen como "NA"
+```
+
+## Con arreglo
+
+```{r remedy7, echo=TRUE}
+x<-c("a","b","c","d")
+for(letra in x) 
+  { 
+  print(letra) # Imprime cada uno de los elementos de x.
+  } 
+  # no es necesario cono cer el número de lementos
+
+```
+## While
+
+
+```{r remedy007, echo=TRUE}
+
+x <- 1 
+## valor inicial... 
+while(x < 11) 
+  { # La condición es que x sea menor a 11
+  print(x) 
+  x <- x + 1 ## Aumento el valor de x de a 1 por iteración 
+  }
+
+```
+
+## Cerca de Newton
+
+```{r remedy008, echo=TRUE}
+
+f <- 5 # Valor inicial
+n <- 0 
+while(f > 0.001) 
+{ 
+  n <- n + 1 
+  f <- f / n 
+  print(f) 
+}
+
+```
+
+## Loops con Repeat 
+
+```{r remedy009, echo=TRUE}
+x <- 1
+repeat 
+{ 
+  print(x) 
+  x = x+1 
+  if (x == 6)
+  { 
+    break
+  } 
+}
+
+v <- c("Hola","mundo") 
+cnt <- 2
+
+repeat 
+  { 
+  print(v) 
+  cnt <- cnt+1 
+  if(cnt > 5) { break } 
+  }
+
+```
+
+## Llegamos a las funciones
+
+Función de Gottfried Leibniz para el cálculo de pi
+
+```{r remedy010, echo=TRUE}
+
+leib <- function(n) 
+  { x <- 0:n 
+  imp <- 2 * x + 1 
+  inv <- 1 / imp 
+  elementos <- inv*(- 1)^x 
+  sum(elementos) 
+  } 
+
+leib(10000000) 
+
+
+```
+
+## Sucesión de Fibonacci 
+
+```{r remedy011, echo=TRUE}
+
+fibo=function(n)
+  { 
+  Res=numeric(n) 
+  if(n==1)
+    { Res[1]=1} 
+  if(n==2){ Res[1:2]=c(1,1)}
+  if(n>2)
+    { 
+    Res[1:2]=c(1,1) 
+    for(i in 3:n)
+      { 
+      Res[i]=Res[i-1]+Res[i-2] 
+      } 
+    } 
+  Res 
+  } 
+
+##Ejemplo
+
+fibo(3)
+
+```

@@ -1,0 +1,43 @@
+---
+title: "If"
+author: "Guillermo Durán González"
+date: "2022-10-04"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Ejemplos de uso de $if$ en $R$
+Ahora vamos a mostrar algunos casos elaborados de uso de las sentencias if else en R. Primero, vamos a evaluar la siguiente función que depende de $\mathrm{x}$ :
+$$
+f(x)= \begin{cases}5, & \text { si  } x<0 \\ x \cdot 10 + 5, & \text { si  } 0 \leq x \leq 10 \\ 105, & \text { si } x>10\end{cases}
+$$
+Para ese propósito, se crea una función llamada f y dentro de la función se incluye una condición if anidada para trabajar con todos los casos posibles.
+
+```{r remedy001}
+
+f <- function(x) {
+    if (x<0) {
+        5
+    } else {
+        if (x<=10) {
+            x*10+5
+        } else {
+            105
+        }
+     }
+  }
+
+
+
+```
+Luego se puede probar la función
+
+```{r remedy002}
+f(-10)
+f(5)
+f(15)
+```
+

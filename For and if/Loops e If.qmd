@@ -1,0 +1,90 @@
+---
+title: "Loops e If"
+author: "Guillermo Durán González"
+format: pptx
+editor: visual
+---
+
+## Bifurcación If 
+
+Siempre que la condición sea TRUE (!=0 )
+
+
+```{r remedy001}
+
+if(3 > 2) print(' :D ') 
+if(3 < 2) print(' :( ') 
+if(5) print(' :D ')
+
+```
+
+
+## Se pueden usar las { } para insertar varios comandos juntos:
+
+
+```{r remedy002}
+
+if(3 > 2) 
+  { 
+  print('Es verdadero!') 
+  print(' :D ') 
+  }
+
+```
+
+## Se ejecuta cuando la sentencia es positiva o negativa
+
+```{r remedy003}
+
+x <- 1:10 
+clasif <- ifelse(x > 5, 'grande', 'chico') 
+clasif <- paste(x, clasif) 
+clasif
+
+```
+
+## Manera alternativa
+
+```{r remedy004}
+
+x=1
+z=5
+if(x>3){ y <- 10} else {y<-0}
+
+```
+
+## Bucle For
+
+```{r remedy005}
+
+for(i in 1:10) 
+  { 
+  print(i) #Imprime consecutivamente del 1 al 10 
+  }
+
+```
+
+```{r remedy006}
+
+x<-c("a","b","c","d")
+for(i in 1:6) 
+  { 
+  print(x[i]) # Imprime cada uno de los elementos de x.
+  } 
+  # Los dos últimos, al no existir en x aparecen como "NA"
+
+```
+
+##Loops con While
+
+```{r remedy007}
+
+x <- 1 
+## valor inicial... 
+while(x < 11) 
+  { # La condición es que x sea menor a 11
+  print(x) 
+  x <- x + 1 ## Aumento el valor de x de a 1 por iteración 
+  }
+
+```

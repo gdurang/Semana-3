@@ -1,0 +1,7 @@
+---
+title: "Bifurcación y Bucle"
+author: "Guillermo Durán González"
+format: beamer
+editor: visual
+---
+

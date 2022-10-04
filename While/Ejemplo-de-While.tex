@@ -1,0 +1,239 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage[margin=1in]{geometry}
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same} % disable monospaced font for URLs
+\hypersetup{
+  pdftitle={While},
+  pdfauthor={Guillermo Durán González},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{While}
+\author{Guillermo Durán González}
+\date{2022-10-04}
+
+\begin{document}
+\maketitle
+
+\hypertarget{aplicaciones-de-while}{%
+\subsection{Aplicaciones de While}\label{aplicaciones-de-while}}
+
+El método de Newton es un método numérico popular para encontrar una
+raíz de una ecuación algebraica
+
+Nos referimos, a encontrar un cero de la función \(f(x)\)
+
+\[f(x)=0\] Si \(f(x)\) tiene derivada \(f′(x)\), entonces la siguiente
+iteración debería converger a una raíz si se empieza lo suficientemente
+cerca a esta.
+
+\[x_0 = valor-inicial\]
+
+\[
+x_n=x_{n-1}-\frac{f\left(x_{n-1}\right)}{f^{\prime}\left(x_{n-1}\right)} .
+\] Esto se basa en la aproximación de Taylor
+
+\[
+f\left(x_n\right) \approx f\left(x_{n-1}\right)+\left(x_n-x_{n-1}\right) f^{\prime}\left(x_{n-1}\right) .
+\] El método de Newton equivale a encontrar
+
+\[f\left(x_n\right)=0\]
+
+para \(x_n\).
+
+El peincipio es aproximarnos a ese \(x_n\) el más cercano a la raíz.
+
+Consideremos para este caso una función polinomica de grado 3:
+
+\[
+f(x)=x^3+2 x^2-7
+\]
+
+Donde:
+
+\[
+x_n=x_{n-1}-\frac{x_{n-1}^3+2 x_{n-1}^2-7}{3 x^2+4 x}
+\] \#\# Su implementación en R es algo así:
+
+\(x\) \textless- \(x_0\)
+
+\(f\) \textless- \(xˆ3+2*xˆ2-7\)
+
+\(tolerancia\) \textless- \(0.000001\)
+
+\(while (abs(f) > tolerancia )\{\)
+
+\(f.prime\) \textless- \(3*xˆ2+4*x\)
+
+\(x\) \textless- \(x-f/f.prime\)
+
+\(f\) \textless- \(xˆ3+2*xˆ2-7\}\)
+
+\(x\)
+
+Para \$x\_0 = 1.5 \$
+
+Tendriamos lo siguiente:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{f}\OtherTok{\textless{}{-}}\FunctionTok{double}\NormalTok{(}\DecValTok{1}\NormalTok{)}
+\NormalTok{f.derivada}\OtherTok{\textless{}{-}}\FunctionTok{double}\NormalTok{(}\DecValTok{1}\NormalTok{)}
+\NormalTok{x}\OtherTok{\textless{}{-}}\FunctionTok{double}\NormalTok{(}\DecValTok{1}\NormalTok{)}
+\NormalTok{tolerancia}\OtherTok{\textless{}{-}}\FunctionTok{double}\NormalTok{(}\DecValTok{1}\NormalTok{)}
+\NormalTok{x}\OtherTok{\textless{}{-}}\FloatTok{1.5}
+\NormalTok{f }\OtherTok{\textless{}{-}}\NormalTok{ x}\SpecialCharTok{\^{}}\DecValTok{3} \SpecialCharTok{+} \DecValTok{2}\SpecialCharTok{*}\NormalTok{x}\SpecialCharTok{\^{}}\DecValTok{2} \SpecialCharTok{{-}} \DecValTok{7}
+\NormalTok{tolerancia}\OtherTok{\textless{}{-}} \FloatTok{0.000001}
+\ControlFlowTok{while}\NormalTok{(}\FunctionTok{abs}\NormalTok{(f)}\SpecialCharTok{\textgreater{}}\NormalTok{ tolerancia) }
+\NormalTok{\{}
+\NormalTok{  f.derivada }\OtherTok{\textless{}{-}} \DecValTok{3}\SpecialCharTok{*}\NormalTok{x}\SpecialCharTok{\^{}}\DecValTok{2}\SpecialCharTok{+}\DecValTok{4}\SpecialCharTok{*}\NormalTok{x}
+\NormalTok{  x }\OtherTok{\textless{}{-}}\NormalTok{ x}\SpecialCharTok{{-}}\NormalTok{f}\SpecialCharTok{/}\NormalTok{f.derivada}
+\NormalTok{  f }\OtherTok{\textless{}{-}}\NormalTok{ x}\SpecialCharTok{\^{}}\DecValTok{3}\SpecialCharTok{+}\DecValTok{2}\SpecialCharTok{*}\NormalTok{x}\SpecialCharTok{\^{}}\DecValTok{2{-}7}
+\NormalTok{  \}}
+\NormalTok{x}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 1.428818
+\end{verbatim}
+
+En consecuencia:
+
+\[
+f(1.428818)=1.428818^3+2 \cdot 1.428818^2-7
+\] Resulta:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{f }\OtherTok{\textless{}{-}} \FloatTok{1.428818}\SpecialCharTok{\^{}}\DecValTok{3} \SpecialCharTok{+} \DecValTok{2}\SpecialCharTok{*}\NormalTok{(}\FloatTok{1.428818}\NormalTok{)}\SpecialCharTok{\^{}}\DecValTok{2{-}7}
+\NormalTok{f}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 3.530859e-06
+\end{verbatim}
+
+Es decir \(f(1.428818)\) es \(\approx 0.000003530859\)
+
+Ahora podemos ver el mismo ejemplo con repeat:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{f}\OtherTok{\textless{}{-}}\FunctionTok{double}\NormalTok{(}\DecValTok{1}\NormalTok{)}
+\NormalTok{f.derivada}\OtherTok{\textless{}{-}}\FunctionTok{double}\NormalTok{(}\DecValTok{1}\NormalTok{)}
+\NormalTok{x}\OtherTok{\textless{}{-}}\FunctionTok{double}\NormalTok{(}\DecValTok{1}\NormalTok{)}
+\NormalTok{tolerancia}\OtherTok{\textless{}{-}}\FunctionTok{double}\NormalTok{(}\DecValTok{1}\NormalTok{)}
+\NormalTok{x }\OtherTok{\textless{}{-}} \FloatTok{1.5}
+\NormalTok{tolerancia}\OtherTok{\textless{}{-}} \FloatTok{0.000001}
+\ControlFlowTok{repeat}\NormalTok{\{}
+\NormalTok{  f }\OtherTok{\textless{}{-}}\NormalTok{x}\SpecialCharTok{\^{}}\DecValTok{3} \SpecialCharTok{+} \DecValTok{2}\SpecialCharTok{*}\NormalTok{x}\SpecialCharTok{\^{}}\DecValTok{2} \SpecialCharTok{{-}} \DecValTok{7}
+  \ControlFlowTok{if}\NormalTok{( }\FunctionTok{abs}\NormalTok{(f)}\SpecialCharTok{\textless{}}\NormalTok{ tolerancia ) }\ControlFlowTok{break} \CommentTok{\# para quebrar el loop}
+\NormalTok{  f.derivada}\OtherTok{\textless{}{-}} \DecValTok{3} \SpecialCharTok{*}\NormalTok{ x}\SpecialCharTok{\^{}}\DecValTok{2}   \SpecialCharTok{+} \DecValTok{4} \SpecialCharTok{*}\NormalTok{ x}
+\NormalTok{  x }\OtherTok{\textless{}{-}}\NormalTok{ x }\SpecialCharTok{{-}}\NormalTok{ f }\SpecialCharTok{/}\NormalTok{ f.derivada}
+\NormalTok{  \}}
+\NormalTok{x}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## [1] 1.428818
+\end{verbatim}
+
+\end{document}

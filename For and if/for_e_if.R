@@ -1,13 +1,16 @@
 # installar paquete strigr
 install.packages("stringr")
 library(stringr)
+
 #Constate y variables
 ean13<-"8412345678905"
 eani<-integer(13)
 sumai<-0
 sumap<-0
+
 #creación de vector de entero
 eani<-as.numeric(unlist(str_split(ean13, "")))
+
 #Cálculo de código de control 
 for(i in 1:12)
 {
