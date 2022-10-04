@@ -13,7 +13,7 @@ placas<-patentes$Placa
 
 #toma la patente número 100 de 368 
 placa<-placas[300]
-#placa<-"CTPB-60"
+placa<-"LTVT-33"
 
 #convierte la pantente en arreglo de caracteres
 placac<-as.character(unlist(str_split(placa, "")))
@@ -38,7 +38,7 @@ for( j in 6:1)
   suma<-suma+placan[j]*(k)
   k<-k+1
   }
-residuo<-11-suma%%11
-if(residuo==0) dv<-"0" else if (residuo==10) dv<-"K" else dv<-residuo
+residuo<-suma%%11
+if(residuo==0) dv<-"0" else if (residuo==10) dv<-"K" else dv<-11-residuo
 dv
 placa
