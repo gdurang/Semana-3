@@ -1,0 +1,38 @@
+---
+title: "Pendientes 3ra Clase"
+author: "Guillermo Durán González"
+date: "2022-10-05"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+---
+title: "Actividad Pendiente"
+author: "Guillermo Durán González"
+date: "2022-10-04"
+output: pdf_document
+---
+## Repositorio GitHub
+
+
+## Carpeta While
+
+1. Reproducir el código correspondiente al método de Newton
+2. Evaluar otra función polinomial de raíces conocidas
+
+## Carpeta RUT
+
+1. Instalar el paquete clrutr y los paquetes rlang y cli.
+2. Revisar y ejecutar el código correspondiente al archivo "DigitoVerificador.R"
+3. Usar el archivo "rut.csv" como práctica.
+
+
+## Carpetas EAN 
+
+1. Revisar la creación de la función EAN en sus dos versiones (archivos "Función EAN.R" y "Función EAN True o False.R")
+
+# Acceso a grabación tercera clase:
+
+https://udla.zoom.us/rec/share/O30EeQhmICrCJ_OLkiRSjIcV0BP2rHJ1GdTHv2i78-YLNRgB2SmEZFqiqMEbJNNj.nDsyGZQ-QHBafEi8
