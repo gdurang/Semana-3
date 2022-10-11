@@ -20,6 +20,6 @@ A partir de este códigigo genere la función "placa()" de forma similar a la fu
 
 ## Prueba de la función
 
-Cree para la nueva función un nuevo archivo "Prueba_función.R" que prueve la función a partir del/los archivos CSV de la carpeta "EAN"
+Cree para la nueva función un nuevo archivo "Prueba_función.R" que pruebe la función a partir del/los archivos CSV de la carpeta "Patente"
 
 
