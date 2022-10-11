@@ -1,0 +1,25 @@
+---
+title: "Actividad Creando una Función"
+author: "Guillermo Durán González"
+date: "2022-10-11"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+
+## Crear la función validadora de patente
+
+
+Considere el código dispuesto en el archivo "ean.R" de la carpeta "Funcion_EAN".
+A partir de este códigigo genere la función "placa()" de forma similar a la función "ean()" de "ean.R".
+
+
+## Prueba de la función
+
+Cree para la nueva función un nuevo archivo "Prueba_función.R" que prueve la función a partir del/los archivos CSV de la carpeta "EAN"
+
+

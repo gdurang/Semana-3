@@ -1,5 +1,5 @@
 # Función validadora de RUT
-install.packages(rlang)
+install.packages("rlang")
 install.packages("cli")
 source("https://install-github.me/r-latinoamerica/clrutr")
 library(clrutr)
@@ -7,13 +7,14 @@ library(clrutr)
 library(readr)
 #Creación de lista rut
 rut <- read_delim("RUT/rut.csv", delim = ";",
-escape_double = FALSE, trim_ws = TRUE)
+escape_double = TRUE, trim_ws = TRUE)
 View(rut)
 typeof(rut)
 # Prueba de la Función
 rutnum <- c(16019432)
 rutnum_dv(rutnum)
 rut <- rutnum_rut(rutnum)
+rut
 rut10 <- rut_rut10(rut)
 rut10
 rut10_rutnum(rut10)

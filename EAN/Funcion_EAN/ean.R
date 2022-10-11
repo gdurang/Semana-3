@@ -1,6 +1,7 @@
-library(stringr)
-#creación de la función
 ean<-function(x){
+  if (!is.character(x)) {
+    stop("La función ean() espera una cadena de caracteres numericos.")
+  }
   #variables locales
   sumai<-0
   sumap<-0
@@ -15,26 +16,6 @@ ean<-function(x){
     {sumap<-sumap+eani[i]} 
   }
   # retornando el código de control
-  return((sumai+sumap*3)%%10)
+  if ((sumai+sumap*3)%%10==0) {cc<-0} else {cc<-10-(sumai+sumap*3)%%10} 
+  return(cc)
 }
-#Carga del CSV
-library(readr)
-EANSC <- read_csv("EAN/EANSC.csv")
-View(EANSC)
-df<-data.frame(EANSC)
-#Con arreglos
-eans<-character(2100)
-eancc<-character(2100)
-eans<-df$EANSC
-ean(eans[2])
-for(i in 1:2100)
-{
-  eancc[i]<-ean(eans[i])
-}
-eancc
-#con un Dataframe
-df<-data.frame(eanseancc)
-
-
-
-

@@ -1,0 +1,45 @@
+---
+title: "Códificando buenas prácticas"
+author: "Guillermo Durán González"
+format: pptx
+editor: visual
+---
+
+
+## Confirma que esten disponibles los paquetes a usar
+
+if(!require(stringr)) { install.packages("stringr"); library(stringr) }
+if(!require(readr)) { install.packages("readr"); library(readr) }
+
+## Carga el código de la función a aplicar
+
+source("C:/Users/gdurang/OneDrive - Universidad de las Américas/Escritorio/R/Semana 3/Semana-3/EAN/Funcion_EAN/ean.R")
+
+##Carga del CSV
+
+EANSC <- read_csv("EAN/EANSC.csv")
+
+
+##Crea un Dataframe
+
+df<-data.frame(EANSC)
+
+##Reserva memoria para los arreglos a usar 
+
+eans<-character(2100)
+eancc<-character(2100)
+
+##Caraga en el arreglo con datos
+
+eans<-df$EANSC
+
+##Prueba de la función  
+
+for(i in 1:2100)
+{
+  eancc[i]<-ean(eans[i])
+}
+
+##Creación de un dataframe
+
+dfcCC<-data.frame(eans,ean(eans))
